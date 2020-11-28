@@ -4,6 +4,8 @@ A very simple program written in C that ciphers/deciphers messages using an XOR 
 
 Based on [KyleBanks/XOREncryption](https://github.com/KyleBanks/XOREncryption/blob/master/C/main.c).
 
+Compiled using `gcc -Wall -O2 main.c -o xor`.
+
 ## License
 
 This is free and unencumbered software released into the public domain.
