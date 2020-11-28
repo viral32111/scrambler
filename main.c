@@ -9,9 +9,7 @@ char *crypt( const char *message, const size_t message_length, const char *passw
 	char *result = malloc( message_length );
 
 	// scramble the message using xor
-	for ( int i = 0; i < message_length; i++ ) {
-		result[ i ] = message[ i ] ^ password[ i % password_length ];
-	}
+	for ( int i = 0; i < message_length; i++ ) result[ i ] = message[ i ] ^ password[ i % password_length ];
 
 	// null terminate the result
 	result[ message_length ] = '\0';
@@ -40,9 +38,7 @@ int main() {
 
 	// output the encrypted message in hexadecimal
 	printf( "Encrypted: '" );
-	for ( int i = 0; i < message_length; i++ ) {
-		printf( "%02X", message_encrypted[ i ] );
-	}
+	for ( int i = 0; i < message_length; i++ ) printf( "%02X", message_encrypted[ i ] );
 	printf( "'\n" );
 
 	// output the decrypted message
