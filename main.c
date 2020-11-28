@@ -41,7 +41,7 @@ int main() {
 	// output the encrypted message in hexadecimal
 	printf( "Encrypted: '" );
 	for ( int i = 0; i < message_length; i++ ) {
-		printf( "%02X", message[ i ] );
+		printf( "%02X", message_encrypted[ i ] );
 	}
 	printf( "'\n" );
 
