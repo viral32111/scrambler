@@ -4,7 +4,7 @@
 #include <string.h> // strlen
 
 // magic
-char *crypt( const char message[], const size_t message_length, const char password[], const size_t password_length ) {
+char *crypt( const char *message, const size_t message_length, const char *password, const size_t password_length ) {
 	// allocate memory for storing the result, same length as original message
 	char *result = malloc( message_length );
 
@@ -23,8 +23,8 @@ char *crypt( const char message[], const size_t message_length, const char passw
 // entry point
 int main() {
 	// create the message & password
-	const char message[] = "sup bb?"; // nt
-	const char password[] = "1234"; // nt
+	const char *message = "hello, how are you doing?"; // nt
+	const char *password = "N9HKq3k3n3QbBqBnruYrWBDpB9JU5nn8"; // nt
 
 	// store the length of the message & password
 	const size_t message_length = strlen( message ); // without nt
