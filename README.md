@@ -1,10 +1,8 @@
 # XOR Cipher
 
-A very simple program written in C that ciphers/deciphers messages using an XOR cipher.
+A simple Linux program to encode and decode messages using an [XOR cipher](https://en.wikipedia.org/wiki/XOR_cipher).
 
-Based on [KyleBanks/XOREncryption](https://github.com/KyleBanks/XOREncryption/blob/master/C/main.c).
-
-Compiled using `gcc -Wall -O2 main.c -o xor`.
+Inspired by [KyleBanks/XOREncryption](https://github.com/KyleBanks/XOREncryption/blob/master/C/main.c).
 
 ## License
 
@@ -31,4 +29,4 @@ OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE,
 ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR
 OTHER DEALINGS IN THE SOFTWARE.
 
-For more information, please refer to <http://unlicense.org/>.
+For more information, please refer to <http://unlicense.org/>
