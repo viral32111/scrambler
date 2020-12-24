@@ -1,13 +1,4 @@
-# XOR Cipher
-
-A simple Linux program to encode and decode messages using an [XOR cipher](https://en.wikipedia.org/wiki/XOR_cipher).
-
-Inspired by [KyleBanks/XOREncryption](https://github.com/KyleBanks/XOREncryption/blob/master/C/main.c).
-
-Compile: `gcc -O2 -Wall -o scrambler $(find source -type f -name *.c | xargs)`.
-
-## License
-
+/**********************************************************************
 This is free and unencumbered software released into the public domain.
 
 Anyone is free to copy, modify, publish, use, compile, sell, or
@@ -32,3 +23,24 @@ ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR
 OTHER DEALINGS IN THE SOFTWARE.
 
 For more information, please refer to <http://unlicense.org/>
+**********************************************************************/
+
+#include <stdlib.h>
+#include "xor.h"
+
+// magic
+char *xor_crypt( const char *message, const size_t message_length, const char *password, const size_t password_length ) {
+
+	// allocate memory for storing the result, same length as original message
+	char *result = malloc( message_length );
+
+	// scramble the message using xor
+	for ( int i = 0; i < message_length; i++ ) result[ i ] = message[ i ] ^ password[ i % password_length ];
+
+	// null terminate the result
+	result[ message_length ] = '\0';
+
+	// return the result
+	return result;
+
+}
